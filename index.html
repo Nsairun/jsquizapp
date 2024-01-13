@@ -1,34 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body>
-  <div class="container mx-auto p-4 w-50 bg-gray-100 rounded shadow-md">
-    <h1 class="text-4xl text-center mb-8">MyJsQuizApp</h1>
-    <div class="flex items-center justify-between mb-4">
-      <label for="categorySelect">Category:</label>
-      <select id="categorySelect" class="border border-gray-300 rounded px-2 py-1">
-      </select>
-      <label for="difficultySelect">Difficulty:</label>
-      <select id="difficultySelect" class="border border-gray-300 rounded px-2 py-1">
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="hard">Hard</option>
-      </select>
-      <button id="startButton" class="px-4 py-2 bg-blue-500 text-white rounded">Start Quiz</button>
-    </div>
-    <div id="questionSection" class="hidden mx-auto flex flex-col items-center">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mx-auto p-8 w-50 bg-gray-100 rounded shadow-md">
+      <h1 class="text-4xl text-center mb-8">MyJsQuizApp</h1>
+      <p class="mb-4 text-center text-2xl">Welcome to my quiz app</p>
+      <div
+        id="exampleElement"
+        class="h-1/2 flex flex-col justify-center items-center mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-lg shadow-lg hover:scale-105 transition-transform duration-500 p-6"
+      >
+        <h1 class="text-2xl text-white mb-4">Instructions</h1>
+        <p class="text-white text-center mb-2">
+          Click on the category to select the type of field you would like to
+          respond to...
+        </p>
+        <p class="text-white text-center mb-2">
+          Secondly, click on the difficulty to select the level of difficulty of
+          the questions...
+        </p>
+        <p class="text-white text-center mb-2">
+          Lastly, click on the Start Quiz button to launch the questions...
+        </p>
+      </div>
+      <div class="flex items-center justify-between mb-4">
+        <label for="categorySelect">Category:</label>
+        <select
+          id="categorySelect"
+          class="border border-gray-300 rounded px-2 py-1"
+        ></select>
+        <label for="difficultySelect">Difficulty:</label>
+        <select
+          id="difficultySelect"
+          class="border border-gray-300 rounded px-2 py-1"
+        >
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button
+          id="startButton"
+          class="px-4 py-2 bg-blue-500 text-white rounded"
+        >
+          Start Quiz
+        </button>
+      </div>
+      <div
+        id="questionSection"
+        class="hidden mx-auto flex flex-col items-center"
+      >
         <h2 id="question" class="text-2xl mb-4"></h2>
-      <div id="answerSection" class="mx-auto flex items-center space-x-4"></div>
-      <button id="nextButton" class="hidden px-4 py-2 bg-blue-500 text-white rounded">Next</button>
-    </div>
-    <div id="resultsSection" class="hidden">
+        <div
+          id="answerSection"
+          class="mx-auto flex items-center space-x-4"
+        ></div>
+        <button
+          id="nextButton"
+          class="hidden px-4 py-2 bg-blue-500 text-white rounded"
+        >
+          Next
+        </button>
+      </div>
+      <div id="resultsSection" class="hidden">
         <h2 class="text-2xl mb-4">Quiz Results</h2>
         <p id="correctCount" class="mb-2"></p>
         <p id="wrongCount"></p>
       </div>
-  </div>
-  <script src="./scripts/script.js"></script>
-</body>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>
